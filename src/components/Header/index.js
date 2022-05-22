@@ -1,57 +1,49 @@
 import clsx from "clsx";
-import React, { useState } from "react";
+import React from "react";
 
-const menu = ["Home", "About", "Contact"];
+const menu = [
+  { label: "Investor Relations", url: "#" },
+  { label: "Add Restaurant", url: "#" },
+  { label: "Log In", url: "#" },
+  { label: "Sign Up", url: "#" },
+];
 
 function Header() {
-  const [activeTab, setActiveTab] = useState(0);
   return (
-    <div className="flex h-[48px] items-center justify-between bg-slate-50">
-      <div className="">
-        <a
-          className="cursor-pointer space-x-2"
-          href="#"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="inline-block h-10 w-10 rounded-md object-cover"
-            src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774"
-            alt="logo"
-          />
-          <span className="font-bold text-emerald-700">COMPANY</span>
-        </a>
-      </div>
-      <nav className="">
+    <div className="flex h-[420px] flex-col bg-gray-800">
+      <nav className="flex h-[72px] w-full justify-between py-4">
+        <div className="">
+          <a
+            className="cursor-pointer space-x-2"
+            href="#"
+            rel="noopener noreferrer"
+          >
+            <span className="text-base font-semibold text-white">
+              Get the app
+            </span>
+          </a>
+        </div>
         <ul className="flex list-none">
           {menu.map((item, index) => (
-            <li className={clsx("ml-4 cursor-pointer")} key={`menu-${index}`}>
+            <li
+              className={clsx("ml-5 cursor-pointer p-2")}
+              key={`menu-${index}`}
+            >
               <a
-                className="relative 
-                font-medium 
-                after:absolute 
-                after:left-0 
-                after:bottom-[-6px] 
-                after:h-0 
-                after:w-full 
-                after:transition 
-                after:duration-300
-                after:ease-in
-                after:content-['']
-                hover:after:h-[1px]
-                hover:after:w-full hover:after:bg-emerald-700
+                className=" 
+                text-lg
+                text-white
                 "
-                style={
-                  activeTab === index ? { color: "red" } : { color: "blue" }
-                }
-                onClick={() => setActiveTab(index)}
-                href="#"
+                href={item.url}
               >
-                {item}
+                {item.label}
               </a>
             </li>
           ))}
         </ul>
       </nav>
+
+      <div className="mx-auto h-full w-[766px] bg-slate-600"></div>
     </div>
   );
 }
