@@ -43,7 +43,14 @@ function Header() {
         </ul>
       </nav>
 
-      <div className="mx-auto h-full w-[766px] bg-slate-600"></div>
+      <div className="mx-auto h-full w-[766px] bg-slate-600">
+        <div className="text-center text-6xl font-bold uppercase italic text-white">
+          zomato
+        </div>
+        <div className="text-center text-3xl text-white mt-8">
+          Discover the best food & drinks in <span className="text-4xl">Delhi NCR</span>
+        </div>
+      </div>
     </div>
   );
 }
