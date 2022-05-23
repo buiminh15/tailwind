@@ -56,7 +56,7 @@ function Header() {
             Delhi NCR
           </span>
         </div>
-        <SearchLocation />
+        {/* <SearchLocation /> */}
       </div>
     </div>
   )
