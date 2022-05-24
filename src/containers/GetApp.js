@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import OnAppButton from "../components/Buttons/Button/OnAppButton";
 import RadioButton from "../components/Buttons/RadioButton";
 
 function GetApp() {
@@ -20,6 +21,7 @@ function GetApp() {
           value={option}
         />
       </div>
+      <OnAppButton />
     </div>
   );
 }
