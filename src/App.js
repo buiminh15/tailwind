@@ -8,8 +8,8 @@ import SubjectsContainer from "./containers/SubjectsContainer";
 function App() {
   return (
     <div className="h-screen w-screen overflow-x-hidden bg-slate-500">
+      <Header />
       <Layout>
-        <Header />
         <SubjectsContainer />
         <CollectionContainer />
         <PopularLocalities />

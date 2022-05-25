@@ -17,7 +17,7 @@ export const Subject = ({ img, name, keySubject }) => (
 
 function Subjects() {
   return (
-    <div className="mt-9 flex space-x-4">
+    <div className="mt-10 flex space-x-4">
       {Array(4)
         .fill(1)
         .map((i, index) => (
