@@ -2,6 +2,7 @@ import React from 'react'
 import PopularLocation from '../components/PopularLocation'
 import SeeMore from '../components/PopularLocation/SeeMore'
 
+// test
 function PopularLocalities() {
   const arr = Array(9).fill(1)
   let slicedArr
