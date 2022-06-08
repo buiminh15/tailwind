@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import PopularLocation from "../components/PopularLocation";
 import { SeeMore, SeeLess } from "../components/PopularLocation/SeeMore";
 
-// test
 function PopularLocalities() {
   const [showMore, setShowMore] = useState(false);
   const [showLess, setShowLess] = useState(false);
